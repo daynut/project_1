@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'bang_whack_pow';
+  src: url('../fonts/bang_whack_pow.ttf');
+}
+html {
+  font-family: 'bang_whack_pow';
+}
+
+h1{
+  font-size: 3em;
+  color: red;
+}
+.board button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0;
+  background: #bbb;
+}
