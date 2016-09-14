@@ -25,6 +25,12 @@ h1{
   border: 0;
   background: #bbb;
 }
+button.red {
+  background: red;
+}
+button.black {
+  background: black;
+}
 
 @media (max-width: 460px) {
   .message {
