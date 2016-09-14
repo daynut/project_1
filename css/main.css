@@ -18,12 +18,6 @@ h1{
   margin: 0 15vmin;
   padding: 10vmin;
 }
-aside {
-  float: right;
-}
-.player {
-  color: red;
-}
 .board button {
   width: 60px;
   height: 60px;
@@ -36,6 +30,15 @@ button.red {
 }
 button.black {
   background: black;
+}
+.player {
+
+}
+.input .red {
+  color: red;
+}
+.input .black {
+  color: black;
 }
 
 @media (max-width: 460px) {

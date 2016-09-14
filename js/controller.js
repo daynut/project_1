@@ -2,8 +2,8 @@ $(document).ready(function(){
 // console.log('controller is working');
 
 
-  config.redPlayerName = prompt("Please enter the first player's name. This player will use red game pieces.", config.redPlayerName) || config.redPlayerName;
-  config.blackPlayerName = prompt("Please enter the second player's name. This player will use black game pieces.", config.blackPlayerName) || config.blackPlayerName;
+  var $redPlayerName = prompt("Please enter the first player's name. This player will use red game pieces.", $redPlayerName) || $redPlayerName;
+  var $blackPlayerName = prompt("Please enter the second player's name. This player will use black game pieces.", $blackPlayerName) || $blackPlayerName;
 
   $('.prefix').text(config.playerPrefix);
   $('#player').addClass(currentPlayer).text(config[currentPlayer + "PlayerName"]);
@@ -13,10 +13,16 @@ $(document).ready(function(){
       var y_pos = $('.board tr').index($(this).closest('tr'));
       var x_pos = $(this).closest('tr').find('td').index($(this).closest('td'));
 
+      if (positionIsTaken(x_pos, y_pos)) {
+          alert(config.takenMsg);
+          return;
+      }
 
       addDiscToBoard(currentPlayer, x_pos, y_pos);
       printBoard();
 
+      changePlayer();
+  });
 
 
 
