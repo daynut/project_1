@@ -21,6 +21,9 @@ h1{
 aside {
   float: right;
 }
+.player {
+  color: red;
+}
 .board button {
   width: 60px;
   height: 60px;
