@@ -18,6 +18,9 @@ h1{
   margin: 0 15vmin;
   padding: 10vmin;
 }
+aside {
+  float: right;
+}
 .board button {
   width: 60px;
   height: 60px;
