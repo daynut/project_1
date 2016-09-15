@@ -32,7 +32,7 @@ button.black {
   background: black;
 }
 .player {
-  font-size: 2.2em;
+  font-size: 2.1em;
 }
 .input .red {
   color: red;
@@ -40,9 +40,9 @@ button.black {
 .input .black {
   color: black;
 }
-/*.message {
+.message {
   font-size: 2em;
-}*/
+}
 
 @media (max-width: 460px) {
   .message {
