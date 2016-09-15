@@ -2,10 +2,10 @@ $(document).ready(function(){
 // console.log('controller is working');
 
 
-  var $redPlayerName = prompt("Please enter the first player's name. This player will use red game pieces.", $redPlayerName) || $redPlayerName;
-  var $blackPlayerName = prompt("Please enter the second player's name. This player will use black game pieces.", $blackPlayerName) || $blackPlayerName;
+  var $redPlayerName = prompt("Please enter the first player's name. This player will use RED game pieces.", $redPlayerName) || $redPlayerName;
+  var $blackPlayerName = prompt("Please enter the second player's name. This player will use BLACK game pieces.", $blackPlayerName) || $blackPlayerName;
 
-  $('.prefix').text(config.playerPrefix);
+  $('.prefix').text(this.playerPrefix);
   $('#player').addClass(currentPlayer).text(config[currentPlayer + "PlayerName"]);
 
   $('.board button').click(function(e) {
