@@ -40,9 +40,9 @@ button.black {
 .input .black {
   color: black;
 }
-#message {
+/*.message {
   font-size: 2em;
-}
+}*/
 
 @media (max-width: 460px) {
   .message {
