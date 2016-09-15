@@ -3,9 +3,12 @@ var config = {
   blackPlayerName: "Player 2",
   startingPlayer: "red",
   takenMsg: "Sorry, that one is taken...try again!!",
-  playerPrefix: "Current Player is: "
+  playerPrefix: "Current Player is: ",
+  countToWin: 4,
+  winPrefix: "The winner is: ",
+  drawMsg: "This game is a draw."
+};
 
-}
 var board = [
   [0,0,0,0,0,0,0],
   [0,0,0,0,0,0,0],
@@ -14,4 +17,5 @@ var board = [
   [0,0,0,0,0,0,0],
   [0,0,0,0,0,0,0]
 ];
+
 var currentPlayer = config.startingPlayer;

@@ -35,9 +35,9 @@ $(document).ready(function(){
 
     // If there are empty positions below the one chosen, return the new y-position we should drop the piece to.
    /**
-    @param int x_pos The x-position of the location chosen.
-    @param int y_pos The y-position of the location chosen.
-    @return bool returns true or false for the question "Is this at the bottom?".
+  @param int x_pos The x-position of the location chosen.
+  @param int y_pos The y-position of the location chosen.
+  @return bool returns true or false for the question "Is this at the bottom?".
   */
   function dropToBottom(x_pos, y_pos) {
       // Start at the bottom of the column, and step up, checking to make sure
@@ -47,9 +47,61 @@ $(document).ready(function(){
               return y;
           }
       }
-
       return y_pos;
   }
+
+  function horizontalWin() {
+
+    // Loop through each row, check the x and y pos and count them
+    for (var y = 0; y <=5; y++){
+      for (var x = 0; x <= 6; x++){
+        currentValue = board[y][x];
+        if (currentValue === previousValue && currentValue !== 0){
+          tally += 1;
+        }
+        if (tally === config.countToWin){
+          return true;
+        }
+        previousValue = currentValue;
+      }
+      tally = 0;
+      previousValue = 0;
+    }
+    return false;
+  }
+
+  /**
+  @return bool Returns true if a win was found
+  */
+
+  function verticalWin() {
+    var currentValue = null;
+    previousValue = 0;
+    tally = 0;
+
+    for (var x = 0; x <= 6; x++){
+      for (var y = 0; y <=5; y++){
+        currentValue = board[y][x];
+        if (currentValue === previousValue && currentValue !== 0) {
+            tally += 1;
+        } else {
+           // Reset the tally if a gap is found.
+           tally = 0;
+          }
+        if (tally === config.countToWin) {
+              return true;
+        }
+        previousValue = currentValue;
+      }
+      tally = 0;
+      previousValue = 0;
+    }
+    return false;
+  }
+
+  /**
+  @return bool Returns true if a win was found
+  */
 
 
 
