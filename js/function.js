@@ -1,4 +1,4 @@
-// $(document).ready(function(){
+// window.onload = function(){
 
   /**
  * @param string color Current player color
@@ -10,7 +10,7 @@
     board[y_pos][x_pos] = color;
   }
   // Render the changes to the board in html
-  function changeBoard(){
+  function renderBoard(){
     // Loop through board and add color class to each cell
     for (var y = 0; y <= 5; y++){
       for (var x = 0; x <= 6; x++){
@@ -189,4 +189,4 @@
 
 
 
-// })
+// }

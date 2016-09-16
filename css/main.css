@@ -13,6 +13,10 @@ h1{
   text-shadow: 2px 1px #bbb;
   padding: 0 2em 0 .75em;
 }
+
+.input {
+  /*margin-left: 20px;*/
+}
 .wrapper {
   /*align-content: center;*/
   margin: 0 15vmin;
@@ -32,7 +36,7 @@ button.black {
   background: black;
 }
 .player {
-  font-size: 2.1em;
+  font-size: 2em;
 }
 .input .red {
   color: red;

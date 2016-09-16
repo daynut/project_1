@@ -20,10 +20,18 @@ $(document).ready(function(){
       }
 
       addDiscToBoard(currentPlayer, y_pos, x_pos);
-      changeBoard();
-
+      renderBoard();
+      if (horizontalWin() || verticalWin() || diagonalWin()){
+        $('.prefix').text(config.winPrefix);
+        return;
+      } else if (gameIsDraw()){
+        $('.message').text(config.drawMsg);
+        return;
+      }
       changePlayer();
   });
+
+
 
 
 
