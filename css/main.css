@@ -15,7 +15,7 @@ h1{
 }
 
 .input {
-  /*margin-left: 20px;*/
+  margin-left: 5vw;
 }
 .wrapper {
   /*align-content: center;*/
@@ -36,7 +36,10 @@ button.black {
   background: black;
 }
 .player {
-  font-size: 2em;
+  /*font-size: 2em;*/
+}
+.prefix {
+  /*font-size: 1em;*/
 }
 .input .red {
   color: red;
@@ -45,7 +48,16 @@ button.black {
   color: black;
 }
 .message {
+  /*padding-left: 15px;*/
   font-size: 2em;
+}
+.play-again {
+  color: green;
+  text-decoration: inherit;
+  font-size: 2em;
+  /*text-align: center;*/
+  padding-left: 10vw;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 460px) {
