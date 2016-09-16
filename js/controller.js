@@ -13,14 +13,15 @@ $(document).ready(function(){
       var x_pos = $(this).closest('tr').find('td').index($(this).closest('td'));
       // Make sure piece falls to bottom of column.
       y_pos = dropToBottom(y_pos, x_pos);
-
+      // Check to see if position is taken.
       if (positionIsTaken(y_pos, x_pos)) {
           alert(config.takenMsg);
           return;
       }
-
+      // Add piece to board[y][x]
       addDiscToBoard(currentPlayer, y_pos, x_pos);
-      renderBoard();
+      // Show it on screen
+      printBoard();
       if (horizontalWin() || verticalWin() || diagonalWin()){
         $('.prefix').text(config.winPrefix);
         return;

@@ -10,7 +10,7 @@
     board[y_pos][x_pos] = color;
   }
   // Render the changes to the board in html
-  function renderBoard(){
+  function printBoard(){
     // Loop through board and add color class to each cell
     for (var y = 0; y <= 5; y++){
       for (var x = 0; x <= 6; x++){
@@ -72,7 +72,9 @@
   @return bool Returns true if a horizontal win was found
   */
   function horizontalWin() {
-
+    var currentValue = null;
+        previousValue = 0;
+        tally = 0;
     // Loop through each row, check the x and y pos and count them
     for (var y = 0; y <=5; y++){
       for (var x = 0; x <= 6; x++){
