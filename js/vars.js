@@ -5,7 +5,7 @@ var config = {
   takenMsg: "Sorry, that one is taken...try again!!",
   playerPrefix: "Current Player is: ",
   countToWin: 4,
-  winPrefix: "The winner is: ",
+  winPrefix: "The WINNER is: ",
   drawMsg: "This game is a draw."
 };
 

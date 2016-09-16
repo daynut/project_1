@@ -19,7 +19,7 @@ h1{
 }
 .wrapper {
   /*align-content: center;*/
-  margin: 0 15vmin;
+  margin: 0 15vmin 5vh 15vmin;
   padding: 10vmin;
 }
 .board button {
