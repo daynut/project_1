@@ -24,8 +24,10 @@ $(document).ready(function(){
       printBoard();
       if (horizontalWin() || verticalWin() || diagonalWin()){
         $('.prefix').text(config.winPrefix);
-        // $('.board button').unbind('click');
+
         $('.play-again').show();
+        // $('.board button').unbind('click');
+        // $('.board button').off();
         return;
       } else if (gameIsDraw()){
         $('.message').text(config.drawMsg);
@@ -36,7 +38,7 @@ $(document).ready(function(){
       changePlayer();
   });
   // $('.play-again').click(function(e)) {
-      // location.reload();
+  //     location.reload();
   // }
 
 
