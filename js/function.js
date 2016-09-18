@@ -133,7 +133,7 @@
         currentValue = null;
         previousValue = 0,
         tally = 0;
-    // Check down and to the right across board.
+    // Check down and to the right across board (x axis).
     for (x = 0; x <= 6; x++){
         ydiag = 0;
         xdiag = x;
@@ -158,7 +158,7 @@
         tally = 0;
         previousValue = 0;
     }
-    //Look down to the left across board
+    //Look down to the left across board (x axis)
     for (x = 0; x <= 6; x++){
         ydiag = 0;
         xdiag = x;
@@ -184,6 +184,29 @@
         tally = 0;
         previousValue = 0;
     }
+    // Check down and to the right on left side (y axis)
+    for (y = 0; y <= 5; y++){
+      ydiag = 0;
+      xdiag = x;
+
+      while (6 >= xdiag && ydiag <=5){
+        currentValue = board[ydiag][xdiag];
+        if (currentValue === previousValue && currentValue !== 0) {
+            tally += 1;
+        } else {
+            // Reset the tally if a gap is found.
+            tally = 0;
+        }
+        if (tally === config.countToWin - 1) {
+            return true;
+        }
+        previousValue = currentValue;
+
+        // Shift down and left one diagonal index.
+        ydiag++;
+        xdiag++;
+    }
+
   }
 
 
