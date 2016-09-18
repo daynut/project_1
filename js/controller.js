@@ -24,22 +24,20 @@ $(document).ready(function(){
       printBoard();
       if (horizontalWin() || verticalWin() || diagonalWin()){
         $('.prefix').text(config.winPrefix);
-
         $('.play-again').show();
-        // $('.board button').unbind('click');
-        // $('.board button').off();
+        $('.board button').off('click');
         return;
       } else if (gameIsDraw()){
         $('.message').text(config.drawMsg);
-        // $('.board button').unbind('click');
+        $('.board button').off('click');
         $('.play-again').show();
         return;
       }
       changePlayer();
   });
-  // $('.play-again').click(function(e)) {
-  //     location.reload();
-  // }
+  $('.play-again').click(function(e) {
+      location.reload();
+  });
 
 
 

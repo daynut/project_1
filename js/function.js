@@ -209,7 +209,7 @@
       tally = 0;
       previousValue = 0;
     }
-
+    // Check down and to the left on the right side.
     for (y = 0; y <= 5; y++){
       ydiag = y;
       xdiag = 6;
@@ -235,7 +235,11 @@
       tally = 0;
       previousValue = 0;
     }
+    // If no diagonal win found, return false.
+    return false;
   }
+
+
 
 
 
